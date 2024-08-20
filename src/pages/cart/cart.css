@@ -1,0 +1,146 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartItem {
+  width: 700px;
+  height: 250px;
+  display: flex;
+
+  align-items: center;
+  box-shadow: 1px 1px 10px #ffffffb3;
+  border-radius: 25px;
+  margin: 30px;
+  padding-left: 20px;
+  background-color: #121111e2;
+}
+
+.cartItem img {
+  width: 200px;
+  border-radius: 20px;
+  
+}
+
+.cartItem .description {
+  flex-grow: 1;
+  width: 100%;
+  font-size: 30px;
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-start; /* Align the content to the start */
+  align-items: flex-start;
+  margin-left:20px ;
+}
+
+.countHandler input {
+  width: 40px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.checkout button {
+  width: 150px;
+  height: 50px;
+  background-color: #202020 ;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+}
+.checkout p{
+  margin: 15px;
+}
+
+
+.glow-on-hover {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #202020 ;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-color: #202020 ;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 7px);
+  height: calc(100% + 7px);
+  opacity: 0; /* Start with no opacity */
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1; /* Glow effect appears on hover */
+  animation: glowing 20s linear infinite;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #202020;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  10% { background-position: 60% 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 20% 0; }
+}
+
+
+.pointer {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+ .cartItems{
+  margin-right: 60px;
+ }
+  .cartItem {
+    height: auto;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px;
+      
+  }
+
+  .cartItem img {
+      width: 100%; 
+      max-width: 150px; 
+      margin-bottom: 12px; 
+  }
+
+  .cartItem .description {
+      font-size: 1rem; 
+      margin-left: 0;
+    
+   
+  }
+
+  .checkout button {
+      width: 100%; 
+      max-width: 250px; 
+  }
+}

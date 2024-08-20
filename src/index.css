@@ -1,0 +1,52 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/* Global Reset */
+
+
+@media (max-width: 1200px) {
+  /* For large screens */
+}
+
+@media (max-width: 992px) {
+  /* For medium screens like tablets */
+}
+
+@media (max-width: 768px) {
+  /* For small screens like landscape phones */
+}
+
+@media (max-width: 576px) {
+  /* For extra small screens like portrait phones */
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth; /* Smooth scrolling for a better user experience */
+  font-size: 16px; /* Base font-size for responsive typography scaling */
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif);
+  line-height: 1.5;
+  background-color: var(--background-color, #000000);
+  color: var(--color, rgba(255, 255, 255, 0.87));
+}

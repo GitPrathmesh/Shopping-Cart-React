@@ -1,0 +1,120 @@
+/* Root Styles */
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #000000;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Universal Box Sizing */
+  *,
+  *::before,
+  *::after {
+      box-sizing: border-box; /* This ensures padding and borders are included in width/height */
+  }
+  
+  /* Global Overflow Handling */
+  body, html {
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+      max-width: 100%; /* Ensure the body and html don't exceed the viewport width */
+  }
+  
+  /* Shop Title */
+  .shopTitle{
+      margin-top: 100px;
+      text-align: center;
+      font-size: 40px;
+  }
+  
+  /* Product Grid */
+  .products{
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px 20px;
+      place-items: center;
+      overflow-x: hidden; /* Prevent horizontal scroll within the grid */
+  }
+  
+  /* Media Query for Tablets (992px and below) */
+  @media (max-width: 992px) {
+      .products {
+          grid-template-columns: repeat(2, 1fr); 
+      }
+  }
+  
+  /* Media Query for Small Devices (768px and below) */
+  @media (max-width: 768px) {
+      .products {
+          grid-template-columns: 1fr; /* 1 column on small screens */
+      }
+  
+      .shopTitle {
+          font-size: 32px; /* Reduce title size on small devices */
+      }
+  
+      .product {
+          width: 90%; /* Reduce product width on small screens */
+          margin: 10px auto; /* Center products and adjust margins */
+      }
+  
+      .addToCartButton {
+          min-width: 80px; /* Reduce button size on small devices */
+          padding: 5px 8px; /* Adjust padding for smaller screens */
+      }
+  }
+  
+  /* Individual Product Styling */
+  .product{
+      border-radius: 15px;
+      width: 300px;
+      height: auto;
+      margin: 20px; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  /* Responsive Image Styling */
+  .product img{
+      width: 100%;
+      max-width: 300px; 
+      height: auto;
+  }
+  
+  /* Hover Effect on Products */
+  .product:hover{
+      transition: 0.3s ease-in;
+      cursor: pointer;
+  }
+  
+  /* Add to Cart Button Styling */
+  .addToCartButton{
+      background-color: transparent;
+      border: 2px solid #fff;
+      min-width: 100px;
+      padding: 5px 10px;
+      border-radius: 15px;
+  }
+  
+  .addToCartButton:hover{
+      background-color: rgb(255, 253, 253);
+      color: #000;
+      cursor: pointer;
+  }
+  
+  /* Description Text Styling */
+  .description{
+      text-align: center;
+  }
+  
